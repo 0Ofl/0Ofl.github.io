@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="logo.png">
+    <title>❁</title>
+	
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+		a{
+			color:darkslategray;
+		}
+		
+        body {
+			display: flex;
+			background-image: url('background.png');
+			background-size: 15%;
+			background-repeat: repeat;
+        }
+		
+		p{
+			font-family: "Source Han Sans CN";
+			font-size: 14px;
+			margin-bottom: 0px;
+			margin-top: 0px;
+		}
+        
+		@font-face {
+			font-family: 'Source Han Serif SC';
+  			src: url('SourceHanSerifSC-Heavy.otf');
+		}
+		
+		@font-face {
+			font-family:'Source Han Sans CN';
+			src:url('Source Han Sans CN ExtraLight.otf');
+		}
+		
+        .card {
+			margin: 100px 50px 100px 100px;
+			width: 230px;
+			height: 100%;
+            font-family: 'Source Han Serif SC';
+            background: beige;
+            padding: 20px;
+			padding-top: 40px;
+			border: 2px solid #333;
+        }
+				
+        .detail {
+			border-top: 2px solid #333;
+			border-bottom: 2px solid #333;
+			margin-top: 100px;
+			margin-right: 120px;
+			margin-bottom: 100px;
+			background-color: beige;
+			color: darkslategray;
+			padding-top: 30px;
+			padding-bottom: 70px;
+			flex: 1;
+			flex-direction: column；
+        }
+		
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 43px;
+        }
+		
+		.second{
+			font-size: 45px;
+			margin-top: -45px; 
+			margin-bottom: 10px;
+		}
+		
+		.rect{
+			height: 30px;
+			width: 10px;
+			background-color:darkslategray;
+		}
+        
+		.content{
+			display: none;
+			padding: 20px 30px 0px 30px;
+		}
+		
+		.content.active {
+            display: block;
+        }
+		
+		.strong{
+			font-family: "Source Han Serif SC";
+			font-weight: bold;
+		}
+		
+		/*用于tag之间的排版*/
+        .tagSetter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            margin-bottom: 30px;
+        }
+        
+        .tag {
+            background: Coral;
+            transition: all 0.3s ease;
+            border: 2px solid DarkSlateGray;
+            font-weight: bold;
+            color: DarkSlateGray;
+            padding: 3px 10px;
+            font-size: 15px;
+        }
+        
+        .tag:hover {
+            background: DarkSlateGray;
+        }
+        
+        .tag.active {
+            background: DarkSlateGray;
+            color: white;
+        }
+
+    </style>
+</head>
+	
+	
+<body>
+	
+<div class="card">
+  		<h1>Résumé</h1>
+		<h1 class="second">伍芙生</h1>
+        <div class="rect"></div>
+        <div class="tagSetter">
+          <div class="tag" data-target="art">美术</div>
+            <div class="tag" data-target="AWD">护网</div>
+            <div class="tag" data-target="game">策音程</div>
+			<div class="tag" data-target="exp">工作/教育</div>
+			<div class="tag" data-target="contact">联络方式</div>
+ 	</div>
+</div>
+	
+<div class="detail">
+	<div class="content" id="art">
+		<p>小学开始学习速写之前，自己就对美术产生了浓厚的兴趣。尽管爸爸是红绿色盲，我的大学专业也与艺术无关，毕业后还是预留了两年时间在光翼学园雕琢作品，用以准备之后的求职。</p>
+		<p>在与不同小伙伴合作了三四个作品后，受到合作者的催促<span class="strong">“去找份工作吧”</span>，于是进入点点互动开始担任原画师，并在离职后接到了《万国觉醒》的场景美宣工作。</p>	
+	  	<p>经过几年的积累，逐渐有了独当一面的能力，在CIGA Game Jam斩获<span class="strong">最佳Jam作品</span>并获得<span class="strong">IndiePlay提名</span>，也有经过自己改良画风获得七十万粉丝的独立游戏。</p>
+	  	<p>最近在捡起大学时在“数字媒体艺术”双学位尝试过的三渲二动画，追随盘古@张东升老师的脚步进一步学习三维与辅助绘画，希望应用到游戏中来。</p>
+    </div>
+	
+	<div class="content" id="AWD">
+		<p><span class="strong">擅长使用Silver进行C2。</span></p>
+	</div>
+	
+	<div class="content" id="game">
+		<p><span class="strong">工作以外，喜欢sim/puz/meta类别。</span></p>
+	</div>
+	
+	<div class="content" id="exp">
+		<p><span class="strong">工作经历</span></p>
+		<p>2024.2 重庆IFS红海无限 AI美术师</p>
+		<p>2021 7-9 《万国觉醒》场景美宣</p>
+		<p>2021 5-7 点点互动北京 原画师</p>
+		<p>2020至今 独立项目设计与实现</p>
+		<p>2019 BIRTV展会的CCTV展台讲解</p>
+		<p>2015-2016 学部新闻各版面内容写作</p>
+		<p>2015 活力社区东坝站点 辅导流动人口儿童作业</p>
+		<br>
+		<p><span class="strong">教育经历</span></p>
+		<p>2025 盘古@张东升老师个人班 三维辅助绘画</p>
+		<p>2025 360授权智榜样科技 网络安全</p>
+		<p>2019-2020 光翼学园 浪漫写实绘画 获得优秀学员荣誉</p>
+		<p>2016-2019 中国传媒大学 数字媒体艺术 主修文本策划、拍摄进行、后期合成等；有助教经历</p>
+		<p>2015-2019 中国传媒大学 网络工程-物联网方向 获C++等课程班级第一与校级奖学金</p>
+		<br>
+		<p><span class="strong">语言技能</span></p>
+		<p>CET-6；GRE Verbal 80% percentile</p>
+		<p>法语A2；日语N3</p>
+	</div>
+	
+	<div class="content" id="contact">
+		<p>WeChat: <span class="strong">diform</span></p>
+		<p>电话: +86 <span class="strong"><a href="tel:183-1011-3124">183-1011-3124</a></span></p>
+		<p>E-mail: <span class="strong">woofleod@gmail.com</span></p>
+
+	</div>
+</div>
+	
+</body>
+	
+
+	
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tags = document.querySelectorAll('.tag');
+            
+            tags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    // 获取当前标签对应的内容ID
+                    const targetId = this.getAttribute('data-target');
+                    const contentItem = document.getElementById(targetId);
+                    
+                    if (!contentItem) return; // 如果找不到对应的内容，直接返回
+                    
+                    // 切换当前标签的active状态
+                    this.classList.toggle('active');
+                    
+                    // 切换对应内容的显示/隐藏
+                    contentItem.classList.toggle('active');
+                });
+            });
+        });
+</script>
+</html>

@@ -179,14 +179,14 @@
 		<p>2015-2019 中国传媒大学 网络工程-物联网方向 获C++等课程班级第一与校级奖学金</p>
 		<br>
 		<p><span class="strong">语言技能</span></p>
-		<p>CET-6；GRE Verbal 80 percentile（2017）</p>
-		<p>日语N1</p>
+		<p>CET-6; GRE Verbal 80 percentile（2017）</p>
+		<p>日语 N1</p>
 	</div>
 	
 	<div class="content" id="contact">
-		<p>微信: <span class="strong">mou-uo</span></p>
+		<p>微信: <span class="strong"><a onclick="copyWeChat('mou-uo')">mou-uo</a></span></p>
 		<p>电话: +86 <span class="strong"><a href="tel:189-7328-2115">189-7328-2115</a></span></p>
-		<p>邮箱: <span class="strong">woofl@qq.com</span></p>
+		<p>邮箱: <span class="strong"><a href="mailto:woofl@qq.com">woofl@qq.com</a></span></p>
 		<p>&nbsp;</p>
 		<p>信息收集: <a href="info.html"><span class="strong">info</span></a></p>
 		<p>游戏果酱: <a href="xiangjam.html"><span class="strong">湘与游 Game Jams</span></a></p>
@@ -199,24 +199,33 @@
 
 	
 <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tags = document.querySelectorAll('.tag');
-            
-            tags.forEach(tag => {
-                tag.addEventListener('click', function() {
-                    // 获取当前标签对应的内容ID
-                    const targetId = this.getAttribute('data-target');
-                    const contentItem = document.getElementById(targetId);
-                    
-                    if (!contentItem) return; // 如果找不到对应的内容，直接返回
-                    
-                    // 切换当前标签的active状态
-                    this.classList.toggle('active');
-                    
-                    // 切换对应内容的显示/隐藏
-                    contentItem.classList.toggle('active');
-                });
-            });
-        });
+	document.addEventListener('DOMContentLoaded', function() {
+		const tags = document.querySelectorAll('.tag');
+		
+		tags.forEach(tag => {
+			tag.addEventListener('click', function() {
+				// 获取当前标签对应的内容ID
+				const targetId = this.getAttribute('data-target');
+				const contentItem = document.getElementById(targetId);
+				
+				if (!contentItem) return; // 如果找不到对应的内容，直接返回
+				
+				// 切换当前标签的active状态
+				this.classList.toggle('active');
+				
+				// 切换对应内容的显示/隐藏
+				contentItem.classList.toggle('active');
+			});
+		});
+	});
+
+    function copyWeChat(wxId) {
+      navigator.clipboard.writeText(wxId).then(() => {
+        alert('copied!');
+      }).catch(err => {
+        // 如果浏览器不支持 Clipboard API 的备用提示
+        alert('浏览器不支持，请手动复制');
+      });
+    }
 </script>
 </html>
